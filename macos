@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+if [[ "$OSTYPE" == "darwin"* ]] && type reattach-to-user-namespace >/dev/null 2>&1; then
+  tmux set-option -g default-command "reattach-to-user-namespace -l $SHELL"
+fi
